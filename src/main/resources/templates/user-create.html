@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Indie+Flower&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Create user</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url('https://i.pinimg.com/originals/13/00/d9/1300d9397335ed4241d4ce3f9b1cf707.jpg'); height: 100%; background-position: center">
+<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+    <div class="first-name" style="padding-left: 50%; padding-top: 15%">
+    <label for="firstName" style="font-family: 'Alfa Slab One', cursive">First name</label>
+    <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">
+    </div>
+    <div class="last-name" style="padding-left: 50%">
+    <label for="lastName" style="font-family: 'Alfa Slab One', cursive">Last name</label>
+    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+    </div>
+    <div class="create-user" style="padding-left: 55%">
+    <input type="submit" class="btn btn-primary" value="Create User">
+    </div>
+</form>
+</div>
+</body>
+</html>
